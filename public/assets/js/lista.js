@@ -61,7 +61,7 @@ $(document).ready(function(){
             ContentType : "application/json; charset=utf-8"
         }).done(function(msg){
             alert("Success:");
-            window.location.href="/restclient/jquery/";
+            window.location.href="/restclient/";
         });
     }
 });
