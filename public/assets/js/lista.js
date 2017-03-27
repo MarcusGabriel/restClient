@@ -19,12 +19,16 @@ $(document).ready(function(){
         });
 
     $("#cadastrar").click(function(){
+        var nome = $("#nome").val();
+        var email = $("#email").val();
         $.ajax({
             type:   "POST",
+            dataType: "json",
             url:    "/rest/index.php/pessoas/",
-            data: '{"id":null,"nome":"chun li","email":"email"}',
+            data: '{"nome":"'+nome+'","email":"'+email+'"}'
         }).done(function(msg){
-            alert('dados salvos: '+msg);
+            alert('Cadastrado! Id: '+msg.id);
+            window.location.href='/restClient/';
         });        
    });
 
@@ -60,7 +64,7 @@ $(document).ready(function(){
             dataType: "json",
             ContentType : "application/json; charset=utf-8"
         }).done(function(msg){
-            alert("Success:");
+            alert("Deletado!");
             window.location.href="/restclient/";
         });
     }
