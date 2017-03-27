@@ -32,7 +32,7 @@ $(document).ready(function(){
         });        
    });
 
-   $("#editButton").click(function(){
+   $("#editButton").click(function(){       
        var id = $("#editId").val();
        var nome = $("#editNome").val();
        var email = $("#editEmail").val();
@@ -41,7 +41,8 @@ $(document).ready(function(){
             url:    "/rest/index.php/pessoas/"+id,
             data: '{"nome":"'+nome+'","email":"'+email+'"}',
         }).done(function(msg){
-            alert('dados salvos: '+msg);
+            alert('dados salvos ');
+            window.location.href="/restClient/";
         });        
    });
 
