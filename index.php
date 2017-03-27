@@ -9,13 +9,13 @@
     </head>
     <body>
         <h1> Cadastrar Cliente</h1>
-        <form method="post" autocomplete="off">
-            <label>Nome:
-            <input name="nome" type="text" id="nome" value=""required/></label><br />
-            <label>Email:
-            <input name="email" type="text" id="email" size="60" required/></label><br />            
-            <button id='cadastrar' type="submit">Salvar</button>
-        </form>
+
+        <label>Nome:
+        <input name="nome" type="text" id="nome" value=""required/></label><br />
+        <label>Email:
+        <input name="email" type="text" id="email" size="60" required/></label><br />            
+        <button id='cadastrar'>Salvar</button>
+
         <hr>
         <div class='col-md-8'>
             <table class='table table-bordered table-striped table-responsive table-hover'>
